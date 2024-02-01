@@ -22,6 +22,7 @@ const Character = ({characteristic}) => {
             </ul>
             <h2>URL: <a href={url}>{url}</a></h2>
             <h2>Created: {created}</h2>
+            <hr/>
         </div>
     );
 };
