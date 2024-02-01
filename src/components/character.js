@@ -10,8 +10,8 @@ const Character = ({characteristic}) => {
             <h2>Species: {species}</h2>
             <h2>Type: {type}</h2>
             <h2>Gender: {gender}</h2>
-            <h2>OriginName:{origin.name} <br/> OriginURL: <a href={origin.url}>{origin.url}</a></h2>
-            <h2>LocationName:{location.name} <br/> LocationURL: <a href={location.url}>{location.url}</a></h2>
+            <h2>OriginName: {origin.name} <br/> OriginURL: <a href={origin.url}>{origin.url}</a></h2>
+            <h2>LocationName: {location.name} <br/> LocationURL: <a href={location.url}>{location.url}</a></h2>
             <h2>Episodes:</h2>
             <ul>
                 {episode.map((ep, index) => (
