@@ -1,3 +1,6 @@
+/*
+1. Описати всю сім'ю сімпсонів (5 персонажів)
+ */
 import React from 'react';
 import {Character} from "./components/Character";
 
