@@ -1,0 +1,14 @@
+.postContainer{
+    display: flex;
+    align-items: center;
+}
+
+.postContainer div{
+    width: 50vw;
+    height: 10vh;
+}
+
+button{
+    margin-left: 20px;
+    height: 20px;
+}
