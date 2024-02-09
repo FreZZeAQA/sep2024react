@@ -23,7 +23,7 @@ const CarsContainerComponent = () => {
     return (
         <div>
             <CarFormContainer setTrigger={setTrigger} setCarForUpdate={setCarForUpdate} carForUpdate={carForUpdate} />
-            <CarsComponent cars={cars} setCarForUpdate={setCarForUpdate} onDelete={handleDelete} /> {/* Передаємо функцію видалення */}
+            <CarsComponent cars={cars} setCarForUpdate={setCarForUpdate} onDelete={handleDelete} />
         </div>
     );
 };
