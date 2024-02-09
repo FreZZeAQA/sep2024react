@@ -1,0 +1,10 @@
+.postContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding-bottom: 20px;
+}
+
+.postContainer input{
+    margin-bottom: 10px;
+}

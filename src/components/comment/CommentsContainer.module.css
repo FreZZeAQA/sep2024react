@@ -1,0 +1,8 @@
+.container {
+    width: 40vw;
+    float: right;
+}
+
+.content {
+    width: fit-content;
+}
