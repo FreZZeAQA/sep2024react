@@ -11,7 +11,7 @@ const UserFormComponent = ({ setUsers }) => {
     const save = async (user) => {
         try {
             const { data } = await userService.post(user);
-            setUsers(prevUsers => [...prevUsers, data]);
+            setUsers(prev => [...prev, data]);
             reset();
         } catch (error) {
             console.error("Error while saving user:", error);

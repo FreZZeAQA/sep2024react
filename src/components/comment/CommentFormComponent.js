@@ -11,7 +11,7 @@ const CommentFormComponent = ({ setComments }) => {
     const save = async (comment) => {
         try {
             const { data } = await commentService.post(comment);
-            setComments(prevComments => [...prevComments, data]);
+            setComments(prev => [...prev, data]);
             reset();
         } catch (error) {
             console.error("Error while saving comment:", error);
