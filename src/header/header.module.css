@@ -1,0 +1,19 @@
+.Header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: darkblue;
+}
+
+.Header a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.4s;
+}
+
+.Header a:hover{
+    color: rgb(128, 128, 128);
+    transition: 0.4s;
+}
