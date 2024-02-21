@@ -5,32 +5,33 @@ import css from './Episodes.module.css'
 import { useSearchParams } from "react-router-dom";
 
 const Episodes = () => {
-    const [episodes, setEpisodes] = useState([])
-    const [query,setQuery] = useSearchParams({page:'1'});
-    const [prevNext, setPrevNext] = useState({prev:null , next:null})
-
-
+    const [episodes, setEpisodes] = useState([]);
+    const [query, setQuery] = useSearchParams({ page: '1' });
+    const [prevNext, setPrevNext] = useState({ prev: null, next: null });
 
     useEffect(() => {
         rickAndMortyEpisodesService.getAll({ page: query.get('page') }).then(({ data }) => {
             setEpisodes(data.results);
-            setPrevNext({ prev: data.prev, next: data.next });
+            setPrevNext({ prev: data.info.prev, next: data.info.next });
         });
     }, [query.get('page')]);
 
-
     const prev = () => {
-      setQuery(prev=>{
-          prev.set('page',(+prev.get('page')-1).toString())
-          return prev
-      })
+        if (prevNext.prev !== null) {
+            setQuery(prev => {
+                prev.set('page', (+query.get('page') - 1).toString())
+                return prev
+            })
+        }
     }
-    
+
     const next = () => {
-        setQuery(prev=>{
-            prev.set('page',(+prev.get('page')+1).toString())
-            return prev
-        })
+        if (prevNext.next !== null) {
+            setQuery(prev => {
+                prev.set('page', (+query.get('page') + 1).toString())
+                return prev
+            })
+        }
     }
 
     return (
@@ -47,3 +48,4 @@ const Episodes = () => {
 };
 
 export { Episodes };
+
