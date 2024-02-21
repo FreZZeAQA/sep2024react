@@ -1,0 +1,45 @@
+.episodesTable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.episodeItem {
+    width: calc(25% - 8px); /* 25% ширина для 4 епізодів в ряду з відступом 8px */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.episodeItem:nth-child(4n) {
+    margin-right: 0;
+}
+
+/* Для випадку, коли на останній сторінці лишається 3 епізоди */
+@media (max-width: 768px) {
+    .episodesTable {
+        justify-content: flex-start; /* Вирівнюємо до початку контейнера */
+    }
+
+    .episodeItem {
+        width: calc(25% - 8px); /* 25% ширина для 4 епізодів в ряду з відступом 8px */
+    }
+
+    /* Приховуємо 4-й елемент на останній сторінці */
+    .episodeItem:nth-child(4) {
+        display: none;
+    }
+
+    /* Встановлюємо однакову ширину для 3 епізодів на останній сторінці */
+    .episodeItem:nth-last-child(-n+3) {
+        width: calc(33.33% - 8px); /* 33.33% ширина для 3 епізодів в ряду з відступом 8px */
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+}
