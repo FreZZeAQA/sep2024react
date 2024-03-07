@@ -1,16 +1,15 @@
-const rickAndMortyEndPoint = 'https://rickandmortyapi.com/api';
 
-const episodes = '/episode'
+const baseOwuUrl = 'http://owu.linkpc.net/carsAPI/v1'
+
+const cars = '/cars'
 
 const urls = {
-    episodes: {
-        base: `${rickAndMortyEndPoint}${episodes}`,
-        byId: (id) => `${rickAndMortyEndPoint}${episodes}/${id}`
-    },
-    characters: {
-        base: `${rickAndMortyEndPoint}/character`,
-        byId: (id) => `${rickAndMortyEndPoint}/character/${id}`
+    cars:{
+        base:`${cars}`,
+        byId:(id)=>`${cars}/${id}`
     }
 }
 
-export { rickAndMortyEndPoint, urls };
+export {
+    baseOwuUrl,urls
+}

@@ -1,9 +1,0 @@
-.Block{
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-}
-
-.Block:hover{
-    color: rgb(128, 128, 128);
-}

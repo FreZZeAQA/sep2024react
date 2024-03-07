@@ -1,7 +1,7 @@
 import axios from "axios";
-import {rickAndMortyEndPoint} from "../constants/urls";
+import {baseOwuUrl} from "../constants";
 
-const apiService = axios.create({baseURL:rickAndMortyEndPoint});
+const apiService = axios.create({baseURL:baseOwuUrl});
 
 
 export {apiService}
