@@ -1,6 +1,6 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
-import {MainLayout} from "./layouts/MainLayout";
 import {CarsPage} from "./pages/CarsPage";
+import {MainLayout} from "./layouts";
 
 
 
