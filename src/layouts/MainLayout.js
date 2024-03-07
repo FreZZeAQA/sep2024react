@@ -1,11 +1,11 @@
 import React from 'react';
 import {Outlet} from "react-router-dom";
-import {CarForm} from "../components/CarForm";
+import {Loader} from "../components/Loader";
 
 const MainLayout = () => {
     return (
         <div>
-            <CarForm/>
+            <Loader/>
             <Outlet/>
         </div>
     );

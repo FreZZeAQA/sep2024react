@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import {useForm} from "react-hook-form";
-import {carService} from "../services/carService";
 import {useDispatch, useSelector} from "react-redux";
 import {carsActions} from "../store/slices/carsSlice";
 
@@ -18,18 +17,17 @@ const CarForm = () => {
             setValue('year',carForUpdate.year)
         }
     }, [carForUpdate,setValue]);
+
     const save = async (car) => {
-        await carService.create(car)
-        dispatch(carsActions.trigger())
+        dispatch(carsActions.create({car}))
         reset()
     }
-    
+
     const update = async (car) => {
-        await carService.updateById(carForUpdate.id,car)
-        dispatch(carsActions.trigger())
-        dispatch(carsActions.setCarForUpdate(null))
+        await dispatch(carsActions.updateById({ id: carForUpdate.id, carData: car }))
         reset()
     }
+
 
     return (
         <form onSubmit={handleSubmit(carForUpdate?update:save)}>
